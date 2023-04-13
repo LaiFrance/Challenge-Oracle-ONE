@@ -25,3 +25,19 @@ function descriptografar(texto){
     // retornar a versão original
     return texto;
 }
+
+function copiarTexto(){ 
+    var texto = document.getElementById('resultado').innerHTML;
+    copiarValorCampo(texto);
+    alert('Texto copiado para a área de transferência!');
+} 
+
+function copiarValorCampo(valorCampo) {
+    var inputTemp = document.createElement("input");
+    inputTemp.style = "position: absolute; left: -1000px; top: -1000px";
+    inputTemp.value = valorCampo;
+    document.body.appendChild(inputTemp);
+    inputTemp.select();
+    document.execCommand("copy");
+    document.body.removeChild(inputTemp);
+}
