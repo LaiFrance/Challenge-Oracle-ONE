@@ -1,69 +1,78 @@
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Decodificador de Texto</title>
-  <meta charset="utf-8" />
+	<meta charset="utf-8" />
 	<script src="criptografia.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<style type="text/css">
-		.cyan-container {
-			background-color: #3F51B5;
-		}
-		.white-container {
-			background-color: #FFFFFF;
-		}
-	</style>
 </head>
 <body>
-	<div style="background-color: rgb(245, 244, 244);" class="row">
-		<div  class="col-sm-6" style="background-color:rgba(217, 217, 233, 0.87);">
-		<h1 style="color:rgb(24, 75, 177); text-align: center;">Decodificador de Texto</h1>
-		<img src = "imagens/animate.svg" style="align-items: center; margin-left: 25%; margin-right: 25%; margin-top: 5%; margin-bottom: 5%;"/>
-		<h4 style="font-size: 20px; color:cornflowerblue; padding: 10px; aling-items: center; text-align: center;"> Digite o texto que deseja criptografar ou descriptografar e clique no botão correspondente.
-		<h6 style="text-align:center">
-			
-			Somente letras minúsculas e sem acentuação.</h6>
-		</h4>
-         <input   type="text" id="texto" style="width: 50%; margin-left: 25%; margin-right: 25%; margin-top: 5%; margin-bottom: 5%;"/>
-		 <div style="text-align: center; margin-bottom: 15%;">
-			 <input class="btn btn-primary"
-			 type="button" value="Criptografar" onclick="document.getElementById('resultado').innerHTML = criptografar(document.getElementById('texto').value);" />
-			 <input class="btn btn-primary" type="button" value="Descriptografar" onclick="document.getElementById('resultado').innerHTML = descriptografar(document.getElementById('texto').value);" />
-			 <input class="btn btn-danger"onClick="document.getElementById('texto').value = ''" type="button" value="Limpar" />
+	<header style="background-color: rgb(24, 23, 23);padding: 10px;">
+		<div class="row">
+			<div class="col-sm-12">
+				<img src="imagens/Vector.png"
+					style="padding: 20px; background-color:rgb(253, 253, 253); margin-left: 50px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+				<h1 style="color:rgb(253, 253, 253); display: inline-block; padding: 10px; margin-top: 10px;">Alura</h1>
 			</div>
 		</div>
-		<br>
-		<br>
-		<div class="row">
-			<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">Resultado:</p>
-			<div id="resultado" style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">
-			</div>
-			<diV style="text-align: center;">
-			<input class="btn btn-success" type="button" value="Copiar" onclick="copiarTexto()"/>
-			</diV>
+	</header>
+	<div class="col-sm-6" style="background-color:rgba(204, 204, 222, 0.87);">
+		<h1 style="color:rgb(0, 0, 0); text-align: center;">Decodificador de Texto</h1>
+		<img src="imagens/animate.svg"
+			style="align-items: center; margin-left: 25%; margin-right: 25%; margin-top: 5%; margin-bottom: 5%;" />
+		<h4 style="font-size: 20px; color:rgb(9, 10, 10); padding: 10px; aling-items: center; text-align: center;">
+			Digite o texto que deseja criptografar ou descriptografar e clique no botão correspondente.
+			<h6 style="text-align:center">Somente letras minúsculas e sem acentuação.</h6>
+		</h4>
+		<input type="text" id="texto"
+			style="width: 50%; margin-left: 25%; margin-right: 25%; margin-top: 5%; margin-bottom: 5%;" />
+		<div style="text-align: center; margin-bottom: 15%;">
+			<input class="btn btn-primary" type="button" value="Criptografar"
+				onclick="document.getElementById('resultado').innerHTML = criptografar(document.getElementById('texto').value);" />
+			<input class="btn btn-primary" type="button" value="Descriptografar"
+				onclick="document.getElementById('resultado').innerHTML = descriptografar(document.getElementById('texto').value);" />
+			<input class="btn btn" onClick="document.getElementById('texto').value = ''" type="button" value="Limpar" />
+		</div>
 	</div>
-	<footer 
-		style="background-color: rgb(24, 23, 23); text-align: center; padding: 10px; margin-top: 10px;">
+	<br>
+	<br>
+	<div class="row">
+		<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">
+			Resultado:</p>
+		<div id="resultado"
+			style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">
+		</div>
+		<diV style="text-align: center;">
+			<input class="btn btn" type="button" value="Copiar" onclick="copiarTexto()" />
+		</diV>
+	</div>
+	<footer style="background-color: rgb(24, 23, 23); text-align: center; padding: 10px; margin-top: 10px;">
 		<div class="redes-sociais" style="text-align: center; display: inline-block; padding: 10px; margin-top: 10px;">
 			<a href="https://www.linkedin.com/in/laise-france/" target="_blank" src="imagens/linkedin.png">
 				<img src="imagens/linkedin.png" alt="Linkedin" style="width: 50px; height: 50px; margin: 10px;">
 				<a href="https://www.instagram.com/laise_france/" target="_blank" src="imagens/instagram.png">
 					<img src="imagens/instagram.png" alt="Instagram" style="width: 40px; height: 40px; margin: 10px;">
-					<a class="twitter-timeline" data-lang="pt" data-width="400" data-height="300" data-theme="dark" href="https://twitter.com/LaiseFrance?ref_src=twsrc%5Etfw">Tweets by LaiseFrance</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					
-			</a>
-		</div>
-			<div class="contatos"
-				style="background-color: rgb(24, 23, 23); text-align: center; padding: 10px; margin-top: 10px;">
-				<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">Whatsapp: (81) 99291-3270
-				<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">Email: laise94@hotmail.com
-				<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">Desenvolvido por: <a href="https://www.linkedin.com/in/laise-france/" target="_blank">Laise Farias</a></p>
-			<a href="
-		<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px; margin-top: 10px;">Todos os direitos reservados</p>
-	</footer>
-		
-</body>
-</html>
+					<a class="twitter-timeline" data-lang="pt" data-width="400" data-height="300" data-theme="dark"
+						href="https://twitter.com/LaiseFrance?ref_src=twsrc%5Etfw">Tweets by LaiseFrance</a>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+				</a>
+		</div>
+		<div class="contatos"
+			style="background-color: rgb(24, 23, 23); text-align: center; padding: 10px; margin-top: 10px;">
+			<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">
+				Whatsapp: (81) 99291-3270
+			<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">
+				Email: laise94@hotmail.com
+			<p style="font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px;">
+				Desenvolvido por: <a href="https://www.linkedin.com/in/laise-france/" target="_blank">Laise Farias</a>
+			</p>
+			<a href="
+		<p style=" font-size: 20px; font-style: italic; color:cornflowerblue; text-align: center; padding: 10px; margin-top:
+				10px;">Todos os direitos reservados</p>
+	</footer>
+
+</body>
+
+</html>
