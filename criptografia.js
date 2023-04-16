@@ -1,5 +1,4 @@
 // Bloquear caracteres especiais e letras maiúsculas
-const textoInput = document.querySelector("#texto-input");
 
 textoInput.addEventListener("keydown", function(e) {
   if (!checkChar(e)) {
@@ -32,6 +31,7 @@ function criptografar(texto) {
   texto = texto.replace(/i/g, "imes");
   texto = texto.replace(/o/g, "ober");
   texto = texto.replace(/u/g, "ufat");
+  texto = texto.replace(/mes/g, "");
 
   if (checkChar(texto)) {
     console.log(texto);
@@ -51,6 +51,9 @@ function descriptografar(texto) {
   texto = texto.replace(/imes/g, "i");
   texto = texto.replace(/ober/g, "o");
   texto = texto.replace(/ufat/g, "u");
+  texto = texto.replace(/mes/g, "");
+  
+
   if (checkChar(texto)) {
     console.log(texto);
   } else {
