@@ -12,11 +12,6 @@ function checkChar(e) {
   if (charCode >= 65 && charCode <= 90) {
     alert("Não é permitido letras maiúsculas!");
     e.preventDefault();
-    return false;
-    // Caracteres especiais
-  } else if (charCode >= 32 && charCode <= 47) {
-    alert("Não é permitido caracteres especiais!");
-    e.preventDefault();
     // numeros
   } else if (charCode >= 48 && charCode <= 57) {
     alert("Não é permitido!");
@@ -25,15 +20,11 @@ function checkChar(e) {
   } else if (charCode >= 192 && charCode <= 255) {
     alert("Não é permitido !");
     e.preventDefault();
-    // não aceita @ nem ç nem ~
-  } else if (charCode == 64 || charCode == 231 || charCode == 126) {
-    alert("Não é permitido caracteres especiais!");
-    e.preventDefault();
-    return false;
   } else {
     return true;
   }
 }
+
 
 function criptografar(texto) {
   // substituir as letras
